@@ -3,7 +3,7 @@ import {useEffect, useState} from "react";
 
 const getTimeCounter = () => {
     const today = new Date();
-    const hour = today.getHours() > 0 ? today.getHours() : 24;
+    const hour = today.getHours() + 1 //> 0 ? today.getHours() : 24;
     const timeCounter = []
     for (let i = 0; i < 24; i++) timeCounter.push(<li className=" pl-[2.7vh] h-[3vh]" key={i}></li>);
     const time = today.toLocaleString('en-US', { hour: 'numeric',  minute: 'numeric', hour12: true })

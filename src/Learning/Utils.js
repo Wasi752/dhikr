@@ -12,7 +12,7 @@ export const State = {
 export const getRandomNum = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
 export const getQuiz = data => {
-    const questionIndex = getRandomNum(0, 1);
+    const questionIndex = getRandomNum(0, 2);
     const answerIndex = +!questionIndex;
 
     const randSet = new Set();
@@ -23,9 +23,9 @@ export const getQuiz = data => {
     const randElem = randNumArray.map(i => data.at(i))[0];
     const sortedElems = randNumArray.sort().map(i => data.at(i));
     return {
-        question: randElem[questionIndex],
-        correctAnswer: randElem[answerIndex],
-        answers: sortedElems.map(elem => elem[answerIndex])
+        question: randElem[0],
+        correctAnswer: randElem[2],
+        answers: sortedElems.map(elem => elem[2])
     };
 };
 
