@@ -24,8 +24,8 @@ export const getQuiz = data => {
     const sortedElems = randNumArray.sort().map(i => data.at(i));
     return {
         question: randElem[0],
-        correctAnswer: randElem[2],
-        answers: sortedElems.map(elem => elem[2])
+        correctAnswer: randElem[3],
+        answers: sortedElems.map(elem => elem[5])
     };
 };
 
