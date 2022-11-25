@@ -4,7 +4,7 @@ import { useLocalStorage } from "../Utils";
 import { useState } from "react";
 
 function LearningPanel() {
-  const [show, setShow] = useLocalStorage("show", false);
+  const [show, setShow] = useLocalStorage( false);
   const [showHadith, setShowHadith] = useLocalStorage("showHadith", true);
   const toggle = () => setShowHadith(!showHadith);
   return (
