@@ -1,4 +1,4 @@
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 
 const time = process.env.REACT_APP_QUIZ_TIME;
 
@@ -16,14 +16,14 @@ export const getQuiz = data => {
     const answerIndex = +!questionIndex;
 
     const randSet = new Set();
-    while (randSet.size < 4) {
+    while (randSet.size < 6) {
         randSet.add(getRandomNum(0, 199));
     }
     const randNumArray = Array.from(randSet);
     const randElem = randNumArray.map(i => data.at(i))[0];
     const sortedElems = randNumArray.sort().map(i => data.at(i));
     return {
-        question: randElem[0],
+        question: randElem[1],
         correctAnswer: randElem[2],
         answers: sortedElems.map(elem => elem[2])
     };
@@ -32,11 +32,11 @@ export const getQuiz = data => {
 export const getTimerStyle = state => {
     switch (state) {
         case State.timerRunning:
-            return {animation: `time-out linear ${time}s`};
+            return { animation: `time-out linear ${time}s` };
         case State.correctlyAnswered:
-            return {width: '100%', backgroundColor: '#17A963'};
+            return { width: '100%', backgroundColor: '#17A963' };
         default:
-            return {width: '100%', backgroundColor: '#a91751'};
+            return { width: '100%', backgroundColor: '#a91751' };
     }
 }
 
