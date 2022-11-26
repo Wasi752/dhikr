@@ -1,8 +1,6 @@
 import Hadith from "./Hadith";
 import Quiz from "./Quiz";
 import { useLocalStorage } from "../Utils";
-import { useState } from "react";
-
 function LearningPanel() {
   const [show, setShow] = useLocalStorage( false);
   const [showHadith, setShowHadith] = useLocalStorage("showHadith", true);
