@@ -9,6 +9,12 @@ function LearningPanel() {
   const toggle = () => setShowHadith(!showHadith);
   return (
     <div className="w-[50%] h-[10%] m-1 flex justify-end">
+
+      {show && (showHadith ? (
+        <Hadith showQuiz={toggle} />
+      ) : (
+        <Quiz showHadith={toggle} />
+      ))}
       <button
         type="button"
         onClick={() => setShow(!show)}
@@ -16,13 +22,10 @@ function LearningPanel() {
       >
         {show ? "Hide" : "Read"}
       </button>
-      {show && (showHadith ? (
-        <Hadith showQuiz={toggle} />
-      ) : (
-        <Quiz showHadith={toggle} />
-      ))}
     </div>
   );
 }
 
-export default LearningPanel ;
+export default LearningPanel;
+
+

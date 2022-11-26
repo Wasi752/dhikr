@@ -16,7 +16,7 @@ export const getQuiz = data => {
     const answerIndex = +!questionIndex;
 
     const randSet = new Set();
-    while (randSet.size < 6) {
+    while (randSet.size < 4) {
         randSet.add(getRandomNum(0, 199));
     }
     const randNumArray = Array.from(randSet);
