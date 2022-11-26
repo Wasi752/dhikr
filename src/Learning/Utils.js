@@ -23,9 +23,9 @@ export const getQuiz = data => {
     const randElem = randNumArray.map(i => data.at(i))[0];
     const sortedElems = randNumArray.sort().map(i => data.at(i));
     return {
-        question: randElem[0],
-        correctAnswer: randElem[3],
-        answers: sortedElems.map(elem => elem[5])
+        question: randElem["BANGALI"],
+        correctAnswer: randElem["BANGALI"],
+        answers: sortedElems.map(elem => elem["BANGALI"])
     };
 };
 
