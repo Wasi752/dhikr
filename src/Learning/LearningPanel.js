@@ -7,6 +7,7 @@ function LearningPanel() {
   const [showHadith, setShowHadith] = useLocalStorage("showHadith", true);
   const toggle = () => setShowHadith(!showHadith);
   return (
+
     <div className="w-[50%] h-[10%]">
         <div className="w-[20%] h-[5%] ml-96 pl-10 flex justify-end">
           <button
@@ -25,8 +26,11 @@ function LearningPanel() {
             <Quiz showHadith={toggle} />
           ))}
         </div>
+
     </div>
   );
 }
 
-export default LearningPanel ;
+export default LearningPanel;
+
+
