@@ -8,17 +8,17 @@ function LearningPanel() {
   const toggle = () => setShowHadith(!showHadith);
   return (
 
-    <div className="w-[50%] h-[10%]">
-        <div className="w-[20%] h-[5%] ml-96 pl-10 flex justify-end">
+    <div className="w-[30%] h-[10%] justify-end ">
+        <div className="w-[47%] h-[5%] ml-72 pl-12 flex justify-end ">
           <button
             type="button"
             onClick={() => setShow(!show)}
-            className="text-center text-md font-bold h-[20%] w-[100%] mt-1 border-green-600 hover:text-blue-500 p-2 border rounded-md"
+            className="text-center text-md font-bold h-[20%] w-[50%] mt-1 border-green-600 hover:text-blue-500 p-2 border rounded-md"
             >
             {show ? "Hide" : "Read"}
           </button>
         </div>
-        <div className="w-[80%]  ml-20 flex justify-end">
+        <div className="w-[100%] flex justify-end">
           
           {show && (showHadith ? (
             <Hadith showQuiz={toggle} />

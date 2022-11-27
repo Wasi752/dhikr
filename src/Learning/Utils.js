@@ -16,16 +16,16 @@ export const getQuiz = data => {
     const answerIndex = +!questionIndex;
 
     const randSet = new Set();
-    while (randSet.size < 6) {
+    while (randSet.size < 4) {
         randSet.add(getRandomNum(0, 199));
     }
     const randNumArray = Array.from(randSet);
     const randElem = randNumArray.map(i => data.at(i))[0];
     const sortedElems = randNumArray.sort().map(i => data.at(i));
     return {
-        question: randElem[1],
-        correctAnswer: randElem[2],
-        answers: sortedElems.map(elem => elem[2])
+        question: randElem["ARABIC"],
+        correctAnswer: randElem["BANGALI"],
+        answers: sortedElems.map(elem => elem["BANGALI"])
     };
 };
 

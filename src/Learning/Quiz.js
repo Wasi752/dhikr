@@ -21,7 +21,7 @@ function Quiz({showHadith}) {
                     <h6 className="overflow-hidden text-center text-base w-fit py-[2px] px-[10px] border border-dashed border-[rgba(58, 70, 198, 0.24)] rounded-lg bg-[rgba(0, 255, 21, 0.08)] cursor-pointer my-[10px] mx-0" onClick={showHadith}>Read a Hadith</h6>
                 </div>
             </div>
-        </div>
+        
     )
 }
 
